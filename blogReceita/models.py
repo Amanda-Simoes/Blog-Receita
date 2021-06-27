@@ -8,4 +8,10 @@ class Receita(models.Model):
     porcao = models.PositiveIntegerField()
     tempoPreparo = models.CharField(max_length=100)
     publicacao = models.DateTimeField(auto_now=True)
-    infoAdicional = models.TextField()
+    infoAdicional = models.TextField(blank=True,null=True)
+
+    def __str__(self):
+        return self.nome
+
+    class Meta:
+         verbose_name_plural = 'Receitas'

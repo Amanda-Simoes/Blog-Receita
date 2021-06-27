@@ -3,6 +3,23 @@
 {% block content %}
 
 <br>
-<h1>Receitas</h1>
+<div class="container">
+    <div class="card-header">
+        <h2>Receitas</h2>
+    </div>
+
+    <div class="card-body">
+        {% for r in receitas %}
+            <h4>{{ r.nome }}</h4>
+            <h5>Ingredientes: {{ r.ingredientes }}</h5>
+            <h5>Mode de Preparo: {{ r.preparo }}</h5>
+            <h5>Rende {{ r.porcao }} porções</h5>
+            <h5>Tempo de Preparo: {{ r.tempoPreparo }}</h5>
+            <h5>Data de Publicação: {{ r.publicacao }}</h5>
+            <h5>{{ r.infoAdicional }}</h5>
+        <hr>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock content %}
