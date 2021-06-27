@@ -11,6 +11,7 @@
     <div class="card-body">
         {% for r in receitas %}
             <h4>{{ r.nome }}</h4>
+            <!--<img src="{{ r.imagem }}">-->
             <h5>Ingredientes: {{ r.ingredientes }}</h5>
             <h5>Mode de Preparo: {{ r.preparo }}</h5>
             <h5>Rende {{ r.porcao }} porções</h5>
